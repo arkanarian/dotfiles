@@ -81,7 +81,7 @@ floating_modifier $mod
 # --- Basic Bindings --- #
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # space
 # bindsym $mod+space exec --no-startup-id rofi-menu
@@ -278,7 +278,7 @@ bindsym XF86AudioPrev exec playerctl previous
 exec_always xmodmap ~/.Xmodmap
 
 # Set Wallpaper
-exec_always feh --bg-scale /home/i_maksus/Pictures/wallpapers/pexels-pixabay-247599.jpg
+exec_always feh --bg-scale /home/i_maksus/Pictures/wallpapers/luca-bravo-g130ZN38BZw-unsplash.jpg
 exec_always picom
 exec redshift
 

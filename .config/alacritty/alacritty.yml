@@ -9,12 +9,13 @@ import:
     # seashells - not bad
     # tokyo-night - not bad
 window:
-  #padding:
   class:
     instance: Alacritty
-    general: Alacritty
-#x: 5
-#y: 5
+    general:
+      Alacritty
+      #padding:
+    #x: 5
+    #y: 5
 
 font:
   normal:
