@@ -39,6 +39,9 @@ try:
         #name = re.match(r'[/].*[\.]png$', content)
         name = re.search(r'/wi.*\.', content).group()
         time = re.search(r'_.*_', name).group()[1:-1]
+        from datetime import datetime
+        if datetime.now().strftime("%H") in ["00", "01", "02"]:
+            time = "night"
         type = re.search(r'_\d*\.', name).group()[1:-1]
         if time == "day":
             if type == "1":

@@ -281,6 +281,7 @@ exec_always xmodmap ~/.Xmodmap
 exec_always feh --bg-scale /home/i_maksus/Pictures/wallpapers/luca-bravo-g130ZN38BZw-unsplash.jpg
 exec_always picom
 exec redshift
+exec brightnessctl set 40%
 
 # Arrange HDMI monitor above main monitor
 #exec_always xrandr --output eDP --primary --mode 1920x1080 --pos 960x2160 --rotate normal --output HDMI-A-0 --mode 3840x2160 --pos 0x0 --rotate normal
