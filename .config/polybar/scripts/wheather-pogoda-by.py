@@ -1,4 +1,4 @@
-#!/home/i_maksus/.config/polybar/scripts/venv/bin/python
+#!/home/imaksus/.config/polybar/scripts/venv/bin/python
 import requests
 import json
 import argparse

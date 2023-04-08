@@ -81,8 +81,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -122,15 +120,23 @@ alias la="ls -lAh"
 alias ll="ls -lh"
 alias t="todo.sh"
 
+# sudo
+alias pacman="sudo pacman"
+alias npm="sudo npm"
+
 alias kokoku="python3 /home/i_maksus/6sem/mtran/kokoku/interpreter/interpreter.py "
 alias nv="nvim"
 alias v="vim"
-alias mcal="ncal -wMb"
+alias mcal="ncal -wMb3"
 alias zsh="nvim $HOME/.zshrc"
 alias wifi-buba="nmcli d wifi connect 'buba' password 12356790"
 alias wifi-xxx="nmcli d wifi connect 'xxx new' password 295072310"
 alias gconf="/usr/bin/git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME"
 
 export BAT_THEME="TwoDark"
+
+# Activate oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
