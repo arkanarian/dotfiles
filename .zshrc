@@ -12,6 +12,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/opt/cross/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -89,23 +90,16 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Set personal aliases
 alias cls="clear"
 alias diff="colordiff"
 alias g="git"
@@ -128,10 +122,12 @@ alias kokoku="python3 /home/i_maksus/6sem/mtran/kokoku/interpreter/interpreter.p
 alias nv="nvim"
 alias v="vim"
 alias mcal="ncal -wMb3"
-alias zsh="nvim $HOME/.zshrc"
+alias zshrc="nvim $HOME/.zshrc"
 alias wifi-buba="nmcli d wifi connect 'buba' password 12356790"
 alias wifi-xxx="nmcli d wifi connect 'xxx new' password 295072310"
 alias gconf="/usr/bin/git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME"
+alias tp="trash-put"
+alias nvs="sudoedit"
 
 export BAT_THEME="TwoDark"
 

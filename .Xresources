@@ -1,5 +1,10 @@
 ! https://dpi.lv/ - check proper dpi for a display
-Xft.dpi: 96
+! 4k dpi - 164
+! correct laptop dpi - 141
+! normak laptop dpi - 96
+Xft.dpi: 164
+!Xft.dpi: 141
+!Xft.dpi: 96
 
 ! These might also be useful depending on your monitor and personal preference:
 Xft.autohint: 0

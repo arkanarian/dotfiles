@@ -1,4 +1,8 @@
-#include $HOME/.config/i3/workspaces.conf
+#set $fm eDP
+#set $sm HDMI-A-0
+set $sm eDP
+set $fm HDMI-A-0
+set $mod Mod4
 
 set $ws1 "1"
 set $ws2 "2"
@@ -10,7 +14,6 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-
 set $ws11 "11"
 set $ws12 "12"
 set $ws13 "13"
@@ -32,7 +35,6 @@ workspace 7 output $fm
 workspace 8 output $fm
 workspace 9 output $fm
 workspace 10 output $fm
-
 workspace 11 output $sm
 workspace 12 output $sm
 workspace 13 output $sm
@@ -43,11 +45,6 @@ workspace 17 output $sm
 workspace 18 output $sm
 workspace 19 output $sm
 workspace 20 output $sm
-
-
-set $fm eDP
-set $sm HDMI-A-0
-set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -88,11 +85,11 @@ bindsym $mod+Return exec alacritty
 
 # --- Letter Key Bindings --- #
 
-bindsym $mod+y exec --no-startup-id flameshot gui -p ~/Pictures/screenshots
-bindsym $mod+Shift+y exec --no-startup-id flameshot full -p ~/Pictures/screenshots
+bindsym $mod+y exec --no-startup-id flameshot gui -p ~/pictures/screenshots
+bindsym $mod+Shift+y exec --no-startup-id flameshot full -p ~/pictures/screenshots
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-4/launcher.sh
@@ -275,10 +272,12 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Set Wallpaper
-exec_always feh --bg-scale $HOME/Pictures/wallpapers/luca-bravo-g130ZN38BZw-unsplash.jpg
+exec_always feh --bg-scale $HOME/pictures/wallpapers/luca-bravo-g130ZN38BZw-unsplash.jpg
 exec_always picom
 exec redshift
 exec brightnessctl set 40%
+# Unlock KDEWallet on startup
+# exec --no-startup-id /usr/lib/pam_kwallet_init
 
 # Arrange HDMI monitor above main monitor
 #exec_always xrandr --output eDP --primary --mode 1920x1080 --pos 960x2160 --rotate normal --output HDMI-A-0 --mode 3840x2160 --pos 0x0 --rotate normal
