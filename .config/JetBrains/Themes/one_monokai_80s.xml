@@ -1,0 +1,25 @@
+<mtTheme>
+  <fileId>custom</fileId>
+  <themeId>one_monokai_80s</themeId>
+  <name>One Monokai 80s</name>
+  <editorColorsScheme>One Monokai 80s</editorColorsScheme>
+  <dark>true</dark>
+  <colors>
+    <color id="background" value="0b0d22ff"/>
+    <color id="foreground" value="9fa9c1ff"/>
+    <color id="text" value="9fa9c1ff"/>
+    <color id="highlight" value="424967ff"/>
+    <color id="selectionBackground" value="3f4869ff"/>
+    <color id="selectionForeground" value="ffffffff"/>
+    <color id="button" value="3f4869ff"/>
+    <color id="secondaryBackground" value="0b0d22ff"/>
+    <color id="disabled" value="3d4366ff"/>
+    <color id="contrast" value="0b0d22ff"/>
+    <color id="tableSelected" value="22263aff"/>
+    <color id="secondBorder" value="22263aff"/>
+    <color id="treeSelection" value="546e7a50"/>
+    <color id="notifications" value="161d32ff"/>
+    <color id="accent" value="6075edff"/>
+    <color id="excluded" value="546e7aff"/>
+  </colors>
+</mtTheme>

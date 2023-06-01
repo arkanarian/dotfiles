@@ -118,7 +118,6 @@ alias t="todo.sh"
 alias pacman="sudo pacman"
 alias npm="sudo npm"
 
-alias kokoku="python3 /home/i_maksus/6sem/mtran/kokoku/interpreter/interpreter.py "
 alias nv="nvim"
 alias v="vim"
 alias mcal="ncal -wMb3"
@@ -126,6 +125,19 @@ alias zshrc="nvim $HOME/.zshrc"
 alias gconf="/usr/bin/git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME"
 alias tp="trash-put"
 alias nvs="sudoedit"
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	bc="bc -ql" \
+	rsync="rsync -vrPlu" \
+	mkd="mkdir -pv" \
+	yt="yt-dlp --embed-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ytt="yt --skip-download --write-thumbnail" \
+	ffmpeg="ffmpeg -hide_banner"
 
 export BAT_THEME="TwoDark"
 

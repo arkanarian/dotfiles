@@ -85,8 +85,8 @@ bindsym $mod+Return exec alacritty
 
 # --- Letter Key Bindings --- #
 
-bindsym $mod+y exec --no-startup-id flameshot gui -p ~/pictures/screenshots
-bindsym $mod+Shift+y exec --no-startup-id flameshot full -p ~/pictures/screenshots
+bindsym $mod+y exec --no-startup-id flameshot gui --clipboard 
+bindsym $mod+Shift+y exec --no-startup-id flameshot gui --clipboard -p ~/pictures/screenshots
 
 # kill focused window
 bindsym $mod+q kill
