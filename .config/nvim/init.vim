@@ -3,8 +3,9 @@ set encoding=utf-8
 set number
 set noswapfile
 set scrolloff=7
+" use system clipboard
+set clipboard=unnamedplus
 
-set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -19,6 +20,23 @@ set expandtab
 set shiftwidth=2
 
 inoremap jk <esc>
+
+" mapping russian keys
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+map ж ;
+map э '
+map б ,
+map ю .
+map Х {
+map Ъ }
+map Ж :
+map Э "
+map Б <
+map Ю >
+
+" map H/L for beginning/end of line
+nmap H ^
+nmap L $
 
 call plug#begin('~/.vim/plugged')
 
@@ -41,14 +59,16 @@ Plug 'Pocco81/auto-save.nvim'
 Plug 'justinmk/vim-sneak'
 
 " JS/JSX/TS
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'pangloss/vim-javascript'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'peitalin/vim-jsx-typescript'
+" Plug 'maxmellon/vim-jsx-pretty'
 " TS from here https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 Plug 'nvim-lua/plenary.nvim'
+
+Plug 'tpope/vim-commentary'
 
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install --frozen-lockfile --production',
@@ -56,7 +76,7 @@ Plug 'prettier/vim-prettier', {
 
 Plug 'bmatcuk/stylelint-lsp'
 
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 " Convenient floating terminal window
@@ -77,8 +97,8 @@ let g:netrw_liststyle = 3 " tree instead of plain view
 let g:netrw_browse_split = 3 " vertical split window when Enter pressed on file
 
 " Automatically format frontend files with prettier after file save
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
+"let g:prettier#autoformat = 1
+"let g:prettier#autoformat_require_pragma = 0
 
 " Disable quickfix window for prettier
 let g:prettier#quickfix_enabled = 0
@@ -97,6 +117,12 @@ colorscheme gruvbox
 if (has('termguicolors'))
   set termguicolors
 endif
+
+" Custom colors adjusting
+" Change VisualMode color selection
+hi Visual guifg=NONE guibg=#413c3a gui=none
+highlight CursorLine term=NONE cterm=NONE ctermbg=236 ctermfg=NONE
+hi CursorLineNr cterm=NONE ctermbg=236 ctermfg=7
 
 " variants: mirage, dark, dark
 "let ayucolor="mirage"
@@ -357,8 +383,10 @@ let g:transparent_enabled = v:true
 tnoremap <Esc> <C-\><C-n>
 
 " Telescope bindings
-nnoremap ,f <cmd>Telescope find_files<cr>
-nnoremap ,g <cmd>Telescope live_grep<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Go to next or prev tab by H and L accordingly
 nnoremap H gT

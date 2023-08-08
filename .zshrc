@@ -95,24 +95,25 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
+export TERMINAL='alacritty'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases
-alias cls="clear"
-alias diff="colordiff"
-alias g="git"
-alias ga="git add "
-alias gb="git branch "
-alias gc="git commit"
-alias gd="git diff"
-alias gs="git status "
-alias gl="git log "
-alias l="ls -lah"
-alias la="ls -lAh"
-alias ll="ls -lh"
-alias t="todo.sh"
+alias \
+  cls="clear" \
+  diff="colordiff" \
+  g="git" \
+  ga="git add " \
+  gb="git branch " \
+  gc="git commit" \
+  gd="git diff" \
+  gs="git status " \
+  gl="git log " \
+  l="ls -lah" \
+  la="ls -lAh" \
+  ll="ls -lh"
 
 # sudo
 alias pacman="sudo pacman"
@@ -125,6 +126,8 @@ alias zshrc="nvim $HOME/.zshrc"
 alias gconf="/usr/bin/git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME"
 alias tp="trash-put"
 alias nvs="sudoedit"
+alias screen_4k="~/.screenlayout/external_only.sh"
+alias t="todo.sh"
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \

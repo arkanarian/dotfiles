@@ -1,6 +1,14 @@
 #!/bin/sh
 
+# change layout to Win+Space
+# setxkbmap -model pc104 -layout us,ru -option &
+# setxkbmap -model pc104 -layout us,ru -option grp:win_space_toggle &
+
 #xrandr --output eDP --primary --mode 1920x1080 --pos 960x2160 --rotate normal --output HDMI-A-0 --mode 3840x2160 --pos 0x0 --rotate normal &
-xrdb -merge ~/.Xresources &
-#setxkbmap -model pc104 -layout us,ru -option &
-#setxkbmap -model pc104 -layout us,ru -option grp:win_space_toggle &
+xrdb -merge ~/Xresources &
+sxhkd &                 # bind keys
+dunst &                 # dunst for notifications
+unclutter &             # remove mouse when idle
+redshift &              # night color
+picom &                 # rounded corners, transparency, blur
+brightnessctl set 40% & # set brightness

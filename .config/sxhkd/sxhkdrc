@@ -1,0 +1,21 @@
+super + Return
+  alacritty
+#super + r
+#  $TERMINAL -e lf
+super + i
+  alacritty -e htop
+super + shift + a
+  alacritty -e pulsemixer
+super + s
+  flameshot gui --clipboard
+super + shift + s
+  flameshot gui --clipboard -p ~/pictures/screenshots
+super + shift + x
+  prompt "Shutdown computer?" "sudo -A shutdown -h now"
+super + shift + BackSpace
+  prompt "Shutdown computer?" "sudo -A reboot"
+super + x
+  playerctl pause; i3lock -e -f -c 1d2021; xset dpms force off
+super + o ; {f,o,t}
+	{firefox,obsidian,telegram}
+
