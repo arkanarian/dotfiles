@@ -96,10 +96,10 @@ bindsym XF86PowerOff exec --no-startup-id ~/.config/rofi/powermenu/type-5/powerm
 #exec_always systemd-inhibit --what=shutdown ~/.config/rofi/powermenu/type-4/powermenu.sh
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+y focus left
+# bindsym $mod+u focus down
+# bindsym $mod+i focus up
+bindsym $mod+o focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -160,22 +160,19 @@ bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
 
-bindsym $mod+Mod1+1 workspace number $ws11
-bindsym $mod+Mod1+2 workspace number $ws12
-bindsym $mod+Mod1+3 workspace number $ws13
-bindsym $mod+Mod1+4 workspace number $ws14
-bindsym $mod+Mod1+5 workspace number $ws15
-bindsym $mod+Mod1+6 workspace number $ws16
-bindsym $mod+Mod1+7 workspace number $ws17
-bindsym $mod+Mod1+8 workspace number $ws18
-bindsym $mod+Mod1+9 workspace number $ws19
-bindsym $mod+Mod1+0 workspace number $ws20
+bindsym $mod+Ctrl+1 workspace number $ws11
+bindsym $mod+Ctrl+2 workspace number $ws12
+bindsym $mod+Ctrl+3 workspace number $ws13
+bindsym $mod+Ctrl+4 workspace number $ws14
+bindsym $mod+Ctrl+5 workspace number $ws15
+bindsym $mod+Ctrl+6 workspace number $ws16
+bindsym $mod+Ctrl+7 workspace number $ws17
+bindsym $mod+Ctrl+8 workspace number $ws18
+bindsym $mod+Ctrl+9 workspace number $ws19
+bindsym $mod+Ctrl+0 workspace number $ws20
 
-# move focused container to workspace
+# move focused container to second monitor
 bindsym $mod+Shift+1 move container to workspace number $ws1
-## Temprorary ##
-bindsym $mod+Shift+0 move container to workspace number $ws11
-##
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
 bindsym $mod+Shift+4 move container to workspace number $ws4
@@ -184,10 +181,19 @@ bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
-#bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # move focused container to second monitor
-bindsym $mod+Mod1+Ctrl+1 move container to workspace number $ws11
+bindsym $mod+Shift+Ctrl+1 move container to workspace number $ws11
+bindsym $mod+Shift+Ctrl+2 move container to workspace number $ws12
+bindsym $mod+Shift+Ctrl+3 move container to workspace number $ws13
+bindsym $mod+Shift+Ctrl+4 move container to workspace number $ws14
+bindsym $mod+Shift+Ctrl+5 move container to workspace number $ws15
+bindsym $mod+Shift+Ctrl+6 move container to workspace number $ws16
+bindsym $mod+Shift+Ctrl+7 move container to workspace number $ws17
+bindsym $mod+Shift+Ctrl+8 move container to workspace number $ws18
+bindsym $mod+Shift+Ctrl+9 move container to workspace number $ws19
+bindsym $mod+Shift+Ctrl+0 move container to workspace number $ws20
 
 assign [class="firefox"] $ws1
 assign [class="obsidian"] $ws8
@@ -218,7 +224,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/eww/launch.sh
 
 # Adjust brightness
 #bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%

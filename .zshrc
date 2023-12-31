@@ -33,7 +33,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment one of the following lines to change the auto-update behavior
+# Uncomment one of the following lines to change the a unsetopt correct_alluto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
@@ -51,7 +51,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -80,7 +80,15 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  web-search
+  # zsh-vi-mode
+)
+
+unsetopt correct_all
 
 # User configuration
 
@@ -126,7 +134,8 @@ alias zshrc="nvim $HOME/.zshrc"
 alias gconf="/usr/bin/git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME"
 alias tp="trash-put"
 alias nvs="sudoedit"
-alias screen_4k="~/.screenlayout/external_only.sh"
+alias screen_4k="~/.config/bin/monitor_external_only.sh"
+export TODOTXT_DEFAULT_ACTION=ls
 alias t="todo.sh"
 
 # Verbosity and settings that you pretty much just always are going to want.
@@ -141,11 +150,34 @@ alias \
 	yta="yt -x -f bestaudio/best" \
 	ytt="yt --skip-download --write-thumbnail" \
 	ffmpeg="ffmpeg -hide_banner"
+alias py="python"
+
+# rofi-search
+export GOOGLE_API_KEY=' AIzaSyBDdCEIOYBIbt5GAu74KEjydUWMeJYe_Vk '
+export GOOGLE_SEARCH_ID='02f533e5bd7c74668'
+export ROFI_SEARCH='cse'
+
+alias rofi-search="rofi -modi blocks -blocks-wrap /usr/bin/rofi-search -show blocks -lines 4 -eh 4 -kb-custom-1 'Control+y' -theme /home/imaksus/.config/rofi/rofi-search/rofi-search-theme.rasi"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 export BAT_THEME="TwoDark"
 
 # Activate oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# lf change directory when left
+source "/home/imaksus/.config/lf/lfcd.sh"
+alias lf="lfcd"
+
+# exa - better ls
+alias ls='exa --icons --color=always --group-directories-first'
+alias la='exa -a --icons --color=always --group-directories-first'
+alias l='exa -alF --icons --color=always --group-directories-first'
+alias l.='exa -a | egrep "^\."'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

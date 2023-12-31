@@ -1,5 +1,7 @@
-!Xft.dpi: 164
+!Xft.dpi: 130
 Xft.dpi: 100
+! have dependency on line order in 
+! ~/.config/bin/startup_monitor.sh
 
 ! https://dpi.lv/ - check proper dpi for a display
 ! 4k dpi - 164

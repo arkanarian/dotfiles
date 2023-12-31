@@ -80,6 +80,21 @@ tmux_conf_theme_colour_15="#080808"   # dark gray
 tmux_conf_theme_colour_16="#d70000"   # red
 tmux_conf_theme_colour_17="#e4e4e4"   # white
 
+# --> Catppuccin (Mocha)
+thm_bg="#1e1e2e"
+thm_fg="#cdd6f4"
+thm_cyan="#89dceb"
+thm_black="#181825"
+thm_gray="#313244"
+thm_magenta="#cba6f7"
+thm_pink="#f5c2e7"
+thm_red="#f38ba8"
+thm_green="#a6e3a1"
+thm_yellow="#f9e2af"
+thm_blue="#89b4fa"
+thm_orange="#fab387"
+thm_black4="#585b70"
+
 # default theme (ansi)
 #tmux_conf_theme_colour_1="colour0"
 #tmux_conf_theme_colour_2="colour8"
@@ -245,12 +260,13 @@ tmux_conf_theme_right_separator_sub="|"
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left="  #S "
+tmux_conf_theme_status_left="  #S "
+# tmux_conf_theme_status_right="#{prefix} #{mouse} Continuum: #{continuum_status} #{pairing}#{synchronized},#{?battery_percentage, #{battery_percentage},} , %R , %d %b |#[fg=green]#(tmux-mem-cpu-load --colors --interval 2 --graph-line 0 --averages-count 0)#[default] | #{username}#{root} "
 tmux_conf_theme_status_right="#{prefix} #{mouse} Continuum: #{continuum_status} #{pairing}#{synchronized},#{?battery_percentage, #{battery_percentage},} , %R , %d %b |#[fg=green]#(tmux-mem-cpu-load --colors --interval 2 --graph-line 0 --averages-count 0)#[default] | #{username}#{root} "
 
 # status left style
-tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
-tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
+tmux_conf_theme_status_left_fg="$thm_bg,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
+tmux_conf_theme_status_left_bg="$thm_green,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
 tmux_conf_theme_status_left_attr="bold,none,none"
 
 # status right style
@@ -410,12 +426,22 @@ tmux_conf_uninstall_plugins_on_reload=true
 #set -g @plugin 'tmux-plugins/tmux-cpu'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+
+set -g @plugin 'catppuccin/tmux'
 
 set -g @resurrect-capture-pane-contents 'on'
 set -g @resurrect-dir '$HOME/.tmux/resurrect'
 set -g @resurrect-strategy-nvim 'session'
 set -g @continuum-restore 'on'
 set -g @continuum-save-interval '10'
+
+# -- catppuccin ----------------------------------------------------------------
+
+set -g @catppuccin_status_modules_left "session"
+set -g @catppuccin_status_modules_right "application"
+set -g @catppuccin_status_fill "all"
+set -g @catppuccin_status_left_separator "█"
 
 # -- custom variables ----------------------------------------------------------
 
@@ -450,3 +476,10 @@ setw -g mode-keys vi
 # bind-key @ command-prompt -p "move pane to:"  "join-pane -t ':%%'" # move current pane to window xpecified by number of window and place vertically (default behavior)
 bind-key @ choose-window 'join-pane -h -t "%%"' # (interactively) move current pane to window specified by number of window and place horizontally
 bind-key C-@ choose-window 'join-pane -t "%%"' # (interactively) move current pane to window specified by number of window and place vertically (default behavior)
+
+bind -n M-H previous-window
+bind -n M-L next-window
+
+# Fix colors
+set-option -ga terminal-overrides ",xterm-256color:Tc"
+

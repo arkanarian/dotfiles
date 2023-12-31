@@ -17,17 +17,17 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = none
+    follow = mouse
 
     ### Geometry ###
 
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    width = 400
 
     # The maximum height of a single notification, excluding the frame.
-    height = 300
+    height = 600
 
     # Position the notification in the top right corner
     origin = top-right
@@ -123,7 +123,7 @@
 
     ### Text ###
 
-    font = JetBrains Mono Medium 9
+    font = JetBrains Mono Medium 11
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -234,7 +234,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/xdg-open
+    browser = /usr/bin/firefox
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
@@ -318,14 +318,16 @@
     timeout = 4
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
-
 [urgency_normal]
     background = "#1E2326"
     foreground = "#ffffff"
     timeout = 4
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
-    new_icon = preferences-system-notifications-symbolic
+    #new_icon = preferences-system-notifications-symbolic
+[TelegramDesktop]
+    appname="TelegramDesktop"
+    icon=/usr/share/icons/Adwaita/32x32/status/alarm-symbolic.symbolic.png
 
 [urgency_critical]
     background = "#900000"

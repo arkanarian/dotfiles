@@ -1,5 +1,6 @@
 import:
-  - ~/.config/alacritty/themes/themes/nord_custom.yaml
+  # - ~/.config/alacritty/themes/themes/nord_custom.yaml
+  - ~/.config/alacritty/themes/themes/catppuccin-mocha.yml
     # nord - adjust background
     # gruvbox_dark
     # everforest_dark
@@ -16,6 +17,8 @@ window:
       #padding:
     #x: 5
     #y: 5
+env:
+  TERM: xterm-256color
 
 font:
   normal:

@@ -1,0 +1,514 @@
+/** EWW.SCSS
+Created by saimoom **/
+*{
+	all: unset;
+	// font-family: feather;
+	// font-family: DaddyTimeMono NF;
+	// font-family: JetBrains Mono;
+  // font-size: 14px;
+	font-family: Sofia Pro;
+  // font-family: Iosevka Nerd Font;
+}
+.font-icon {
+  font-family: Iosevka Nerd Font;
+}
+
+/** General **/
+.bar_class {
+  background-color: $background-primary;
+  // border-radius: 16px;
+}
+.module {
+  margin: 0px 0px 0px 0px;
+  border-radius: 10px 16px 0px 10px;
+}
+
+/** tooltip!! **/
+tooltip.background {
+  background-color: $background-primary;
+  font-size: 16;
+  border-radius: 10px;
+  color: #bfc9db;
+}
+
+tooltip label {
+  margin: 6px;
+}
+
+
+/** Widgets **/
+
+.clock_time_class {
+  font-size: 17;
+  font-weight: bold;
+  color: #bfc9db;
+}
+.clock_date_class {
+  font-size: 16;
+  margin: 0px 10px 0px -1px;
+  color: #949ca9;
+  // color: #d7beda;
+}
+
+
+.brightbar trough highlight {
+  background-image: linear-gradient(to right, #e4c9af 30%, #f2cdcd 50%, $yellow 100% *50);
+  border-radius: 10px;
+}
+.volbar trough highlight {
+  background-image: linear-gradient(to right, #afcee0 30%, $blue-light 50%, #77a5bf 100% *50);
+  border-radius: 10px;
+}
+.volume-icon {
+  font-size: 20;
+  color: $blue-light;
+  margin: 0px 10px 0px 10px;
+}
+.microphone-icon {
+  font-size: 20;
+  margin: 0px 5px 0px 5px;
+}
+.microphone-icon-inactive {
+  color: #38384d;
+}
+.microphone-icon-active {
+  color: $blue-light;
+}
+
+
+.module-weather {
+  color: $javacafeMagenta;
+  // color: $background-primary;
+  margin-bottom: 2px;
+  box {
+    border-radius: 5;
+    // border: $magenta solid 2px;
+    // background-color: $magenta;
+    // padding: 0 7px;
+    margin: 2px 6px;
+    .text {
+      font-weight: bold;
+      margin-left: 17px;
+    }
+  }
+}
+.module-layout {
+  color: $magenta;
+  margin: 0 5px;
+  box {
+    // background-color: red;
+    // border-radius: 5;
+    border-bottom: $magenta solid 2px;
+    padding: 0 5px;
+    margin: 3px 0;
+  }
+}
+.module_essid {
+  font-size: 16;
+  color: $blue-light;
+  margin: 0px 10px 0px 5px;
+}
+.module-wif {
+  font-family: Iosevka Nerd Font;
+  color: $blue-light;
+  border-radius: 100%;
+  margin: 0px 10px 0px 5px;
+}
+
+.batbar {
+  color: $green-pastelle;
+  background-color: #38384d;
+  border-radius: 10px;
+}
+.cpubar, .membar, .swapbar {
+  color: $yellow;
+  background-color: #38384d;
+  border-radius: 10px;
+}
+.iconbat {
+  color: $green-pastelle;
+}
+.iconcpu {
+  color: $yellow;
+}
+.iconmem {
+  color: $yellow;
+}
+.iconswap {
+  color: $yellow;
+}
+.iconbat, .iconmem, .iconswap, .iconcpu {
+  font-size: 15;
+  margin: 10px;
+}
+.bright_icon {
+  font-size: 20;
+  color: #e4c9af;
+  margin: 0px 10px 0px 10px;
+}
+
+
+.separ {
+  color: #3e424f;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0px 8px 0px 8px;
+}
+
+.bat_module, .mem_module, .swap_module, .cpu_module {
+  border-radius: 16px;
+  background-color: $background-primary;
+
+  .text {
+    font-size: 16;
+    margin: 0px 0px 0px 6px;
+  }
+}
+.bat_module {
+  margin: 0px 10px 0px 10px;
+}
+.cpu_module {
+  margin: 0px 10px 0px 0px;
+}
+.mem_module {
+  margin: 0px 10px 0px 0px;
+}
+.swap_module {
+  margin: 0px 10px 0px 0px;
+}
+
+scale trough {
+  all: unset;
+  background-color: #22242b;
+  box-shadow: 0 2px 3px 2px #06060b;
+  border-radius: 16px;
+  min-height: 10px;
+  min-width: 70px;
+  margin: 0px 10px 0px 0px;
+}
+
+// Workspaces
+.works {
+  font-size: 15px;
+  font-weight: normal;
+  background-color: $background-primary;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  // Occupied
+  .active-workspace {
+    background-color: rgba(150, 150, 150, 0.4);
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .regular {
+    margin: 0 8px;
+  }
+}
+
+
+// Music
+.song_cover_art {
+	background-size: cover;	
+	background-position: center;
+	min-height: 15px;
+	min-width: 25px;
+	margin: 5px 10px;
+	border-radius: 3px;
+}
+
+.song {
+	color: $blue-light;
+	font-size : 15px;
+	margin : 0px 5px 0px 0px;
+}
+
+.song_btn_play {
+	color: $blue-superlight;
+	font-size : 18px;
+  margin-right: 3;
+}
+
+
+.song_btn_prev, .song_btn_next {
+	color: $blue-superlight;
+	font-size : 14px;
+	margin : 0 6;
+}
+
+// Calendar
+calendar {
+  &:selected {
+    color: $accent;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  &:indeterminate {
+    color: rgba(205, 219, 249, 0.3);
+  }
+}
+
+.calendar {
+  background-color: $background-secondary;
+  border-radius: 10px;
+  
+  .cal-box {
+    background-color: $lighter-background;
+    border-radius: inherit;
+
+    margin: 1em;
+
+    .month-year {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0.5em 0em 0em;
+    }
+
+    .day-names {
+      margin: 1em 1em 0em;
+      font-size: 14px;
+      font-weight: bold;
+      color: $green;
+    }
+  
+    .cal {
+      padding: 1em .75em 0em;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+}
+
+// .cal {
+//   background-color: $background-primary;
+//   font-family: JetBrainsMono Nerd Font;
+//   font-size: 14px;
+//   font-weight: normal;
+
+// .cal-in {
+//   padding: 0px 10px 0px 10px;
+//   color: #bfc9db;
+
+// .cal {
+//      &.highlight {
+//         color: #7b828f;
+//         padding: 20px;
+//       }
+
+//       padding: 5px 5px 5px 5px;
+//       margin-left: 10px;
+//     }
+//   }
+// }
+
+// calender {
+//     color: #bfc9db;
+// }
+// calendar:selected {
+//   color: $blue-light;
+// }
+
+// calendar.header {
+// color: $blue-light;
+// font-weight: bold;
+// }
+
+// calendar.button {
+// color: $green-pastelle;
+// }
+
+// calendar.highlight {
+// color: $blue-light;
+// font-weight: bold;
+// }
+
+// calendar:indeterminate {
+// color: #bfc9db;
+// }
+
+.sys_sep {
+  color: #38384d;
+  font-size: 18;
+  margin: 0px 10px 0px 10px;
+}
+.sys_text_bat_sub, .sys_text_mem_sub {
+  font-size: 16;
+  color: #bbc5d7;
+  margin: 5px 0px 0px 25px;
+}
+.sys_text_bat, .sys_text_mem {
+  font-size: 21;
+  font-weight: bold;
+  margin: 14px 0px 0px 25px;
+}
+.sys_icon_bat, .sys_icon_mem {
+  font-size: 30;
+  margin: 30px;
+}
+.sys_win {
+  background-color: $background-primary;
+}
+.sys_bat {
+  color: $green-pastelle;
+  background-color: #38384d;
+  border-radius: 10px;
+}
+.sys_mem {
+  color: #e4c9af;
+  background-color: #38384d;
+  border-radius: 10px;
+}
+.sys_icon_bat, .sys_text_bat {
+  color: $green-pastelle;
+}
+.sys_icon_mem, .sys_text_mem {
+  color: #e4c9af;
+}
+.sys_bat_box {
+	border-radius: 16px;
+  margin: 15px 10px 10px 20px;
+}
+.sys_mem_box {
+	border-radius: 16px;
+  margin: 10px 10px 15px 20px;
+}
+
+.music_pop {
+  background-color: $background-primary;
+	border-radius: 16px;
+}
+.music_cover_art {
+	background-size: cover;
+	background-position: center;
+	min-height: 100px;
+  box-shadow: 5px 5px 5px 5px #06060b;
+	min-width: 170px;
+	margin: 20px;
+	border-radius: 20px;
+}
+
+.music {
+	color: $blue-light;
+	font-size : 14px;
+	font-weight : bold;
+	margin : 20px 0px 0px -15px;
+}
+
+.music_artist {
+	color: #bbc5d7;
+	font-size : 16px;
+	font-weight : normal;
+	margin : 0px 0px 0px 0px;
+}
+
+.music_btn_prev, .music_btn_play, .music_btn_next {
+	font-family: Iosevka Nerd Font;
+}
+.music_btn_prev {
+	color: #bbc5d7;
+	font-size : 32px;
+	font-weight : normal;
+	margin: 0px 0px 0px 0px;
+}
+.music_btn_play {
+	color: $blue-light;
+	font-size : 48px;
+	font-weight : normal;
+	margin: 0px 0px 0px 0px;
+}
+.music_btn_next {
+	color: #bbc5d7;
+	font-size : 48px;
+	font-weight : normal;
+	margin: 0px 0px 0px 0px;
+}
+
+.music_bar scale trough highlight {
+	all: unset;
+    background-image: linear-gradient(to right, #afcee0 30%, $blue-light 50%, #77a5bf 100% *50);
+	border-radius: 24px;
+}
+.music_bar scale trough {
+	all: unset;
+	background-color: #232232;
+    box-shadow: 0 6px 5px 2px #06060b;
+	border-radius: 24px;
+	min-height: 13px;
+	min-width: 190px;
+	margin : -10px 10px 20px 0px;
+}
+
+.audio-box {
+    background-color: $background-primary;
+	border-radius: 16px;
+}
+.speaker_icon {
+	background-size: cover;
+    background-image: url('images/speaker.png');
+	background-position: center;
+	min-height: 70px;
+	min-width: 75px;
+	margin: 10px 20px 5px 20px;
+	border-radius: 12px;
+}
+
+.speaker_text {
+	color: $blue-light;
+	font-size : 26px;
+	font-weight : bold;
+	margin: 20px 0px 0px 0px;
+}
+
+.speaker_bar scale trough highlight {
+	all: unset;
+    background-image: linear-gradient(to right, #afcee0 30%, $blue-light 50%, #77a5bf 100% *50);
+	border-radius: 24px;
+}
+.speaker_bar scale trough {
+	all: unset;
+	background-color: #232232;
+    box-shadow: 0 6px 5px 2px #06060b;
+	border-radius: 24px;
+	min-height: 13px;
+	min-width: 120px;
+	margin : 0px 0px 5px 0px;
+}
+
+.mic_icon {
+	background-size: cover;
+    background-image: url('images/mic.png');
+	background-position: center;
+	min-height: 70px;
+	min-width: 75px;
+	margin: 5px 20px 20px 20px;
+	border-radius: 12px;
+}
+
+.mic_text {
+	color: $blue-light;
+	font-size : 26px;
+	font-weight : bold;
+	margin: 0px 0px 0px 0px;
+}
+
+.mic_bar scale trough highlight {
+	all: unset;
+    background-image: linear-gradient(to right, #afcee0 30%, $blue-light 50%, #77a5bf 100% *50);
+	border-radius: 24px;
+}
+.mic_bar scale trough {
+	all: unset;
+    box-shadow: 0 6px 5px 2px #06060b;
+	background-color: #232232;
+	border-radius: 24px;
+	min-height: 13px;
+	min-width: 120px;
+	margin : 0px 0px 20px 0px;
+}
+
+.audio_sep {
+  color: #38384d;
+  font-size: 18;
+	margin : 0px 0px 0px 0px;
+}
+

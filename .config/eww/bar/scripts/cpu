@@ -1,0 +1,6 @@
+#!/bin/sh
+
+total=100
+# load="$(grep "Average:" | mpstat -P ALL 1 1 --dec=0 | awk '{print $2, $3}')"
+load="$(mpstat -P ALL 1 1 --dec=0 | awk '/^Average: +all/ {print $3}')"
+echo $load

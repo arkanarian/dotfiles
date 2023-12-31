@@ -10,5 +10,8 @@ sxhkd &                 # bind keys
 dunst &                 # dunst for notifications
 unclutter &             # remove mouse when idle
 redshift &              # night color
-picom &                 # rounded corners, transparency, blur
+picom >/dev/null 2>&1 & # rounded corners, transparency, blur
 brightnessctl set 40% & # set brightness
+# ~/.config/bin/python_hotplug.py &
+~/.config/bin/startup_monitor.sh &
+~/.config/eww/launch &
